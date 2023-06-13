@@ -1,0 +1,12 @@
+<!-- journal/templates/journal/create_entry.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Create Journal Entry</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save Entry</button>
+  </form>
+{% endblock %}
